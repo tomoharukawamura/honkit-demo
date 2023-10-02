@@ -34,6 +34,3 @@ jobs:
 
     - name: upload to s3
       run: aws s3 sync --delete --region ap-northeast-1 ./_book s3://kawamura-cyber-security-lec
-      with:
-        # 生成されるページ
-        publish_dir: ./_book
