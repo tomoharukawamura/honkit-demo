@@ -16,7 +16,7 @@ env:
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
   MY_REGION: ap-northeast-1
   PUBLISH_DIR: ./_book
-  BUCKER_NAME: kawamura-cyber-security-lec
+  BUCKET_NAME: kawamura-cyber-security-lec
 
 jobs:
   deploy:
