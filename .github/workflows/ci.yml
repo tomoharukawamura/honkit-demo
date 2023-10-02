@@ -14,6 +14,9 @@ permissions:
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  MY_REGION: ap-northeast-1
+  PUBLISH_DIR: ./_book
+  BUCKER_NAME: kawamura-cyber-security-lec
 
 jobs:
   deploy:
@@ -33,4 +36,4 @@ jobs:
       run: npm run build
 
     - name: upload to s3
-      run: aws s3 sync --delete --region ap-northeast-1 ./_book s3://kawamura-cyber-security-lec
+      run: aws s3 sync --delete --region $MY_REGION $PUBLISH_DIR s3://$BUCKET_NAME
